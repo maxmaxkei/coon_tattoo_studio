@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Testimonials</title>
+		<link href="css/repeating-style.css" rel="stylesheet">
+		<link href="css/testimonials-style.css" rel="stylesheet">
+		<link href="css/repeating-head-footer-style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+	</head>
+	<body>
+		<header class="main-head">
+			<div class="head">
+				<div class="burger" id="burger">
+					<img src="images/raccoon-intro.png" alt="Coon Image Logo" title="Coon Logo">
+				</div>
+				<div id="TNum">Tel: 0800 000 000</div>
+				<div id="logo"><img src="images/header/logo.png" alt="Tattoo Studio Logo" title="CoonTattoo logo"></div>
+				<div id="VK">
+		 			<a href="#" title="CoonTattoo VKontakte Group">
+		 				<img src="images/header/vk_icon.png" alt="CoonTattoo VK group" title="CoonTattoo VK link">
+		 			</a>
+		 		</div>
+		 	</div>
+		 	<nav id="nav">
+				<ul>
+					<li><a href="index.html" title="Start Page">home</a></li>
+					<li><a href="about-us.html" title="About us Page">about us</a></li>
+					<li><a href="artists.html" title="Artist Page">artists</a></li>
+					<li><a href="#" title="Testimonials Page">testimonials</a></li>
+					<li><a href="gallery.html" title="Gallery Page">gallery</a></li>
+					<li><a href="#" title="Blog Page">blog</a></li>
+					<li><a href="contacts.html" title="Contact Us Page">contact us</a></li>
+				</ul>
+			</nav>
+			<div class="box">
+				<h3><span>testimonials</span><br>never regret a tattoo!</h3>
+				<a href="#bot" id="main_btn">book an appointment</a>
+			</div>
+		</header>
+		<main class="testimonials" id="testimonials">
+			<div class="testimonial">
+				<p class="appointment">Awesome! All at the highest level, the master is good at its job, was completely observed the rules of hygiene!In general, all advise!CoonTattoo is Great!</p>
+				<p class="testim-author">Tom Berg, Plymouth</p>
+			</div>
+			<div class="testimonial">
+				<p class="appointment">Came to the consultation in the studio, wanted a sleeve in black and white style. The master took the markers and in an hour I stood with a live sketch in my hand! 14 hours of work and I left with the finished tattoo! I was shocked by the speed, everything healed and did not go to correction, because everything suits me perfectly!</p>
+				<p class="testim-author">Adam Grey, Plymouth</p>
+			</div>
+			<div class="testimonial">
+				<p class="appointment">Kind, polite, hospitable guys, without pathos ... Respectful attitude to the client's opinion, special thanks to the master Mike for a competent consultation and in the next for a well-done job!</p>
+				<p class="testim-author">Alice lambert, Plymouth</p>
+			</div>
+		</main>
+		<div class="mainDiv">
+			<a id="bot"></a>
+			<div id="form">
+				<div id="topInfo">Enter your appointment</div>
+				<textarea id="mindtxt" wrap="soft"></textarea>
+				<p>Enter your name</p>
+				<input type="text" name="name" id="name">
+				<div id="botBtn">book an appointment</div>
+			</div>
+		</div>
+		<footer>
+			<div class="white">
+			</div>
+			<div class="black">
+				<div class="footer-content">
+					<div class="footer-logo">
+						<img src="images/header/logo.png" alt="Tattoo Studio Logo" title="CoonTattoo logo">
+					</div>
+					<div class="footer-txt">
+						<p>&#169;Coon Tattoo Studio (registered in England: 8000000). All Rights Reserved.</p>
+						<p>Designed by <a href="http://RobbyDesigns.com">RobbyDesigns.com</a></p>
+					</div>
+					<div class="footer-icon">
+						<img src="images/header/vk_icon.png" alt="CoonTattoo VK group" title="CoonTattoo VK link">
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="navigation">
+			<ul>
+				<li class="headdings">Menu</li>
+				<li><a href="index.html" title="Start Page">Home</a></li>
+				<li><a href="about-us.html" title="About us Page">About us</a></li>
+				<li><a href="#" title="Artist Page">Artists</a></li>
+				<li><a href="testimonials.html" title="Testimonials Page">Testimonials</a></li>
+				<li><a href="gallery.html" title="Gallery Page">Gallery</a></li>
+				<li><a href="#" title="Blog Page">Blog</a></li>
+				<li><a href="contacts.html" title="Contact Us Page">Contact us</a></li>
+				<li id="cls" class="headdings">Close</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/menu.js"></script> 
+		<script type="text/javascript">
+			var usertxt = document.getElementById("mindtxt");
+			var username = document.getElementById("name");
+			var mainDiv = document.getElementById("testimonials");
+			var btn = document.getElementById("botBtn");
+			
+			function sendMess() {
+				var text = 	usertxt.value;
+				var textN = username.value;
+				var box = document.createElement("div");
+				var content = document.createElement("p");
+				var name = document.createElement("p");
+				name.setAttribute("class", "testim-author");
+				content.setAttribute("class", "appointment");
+
+				if (text.length > 10)
+				{
+					content.textContent = text;
+					name.textContent = textN;
+					box.setAttribute("class", "testimonial");
+					mainDiv.appendChild(box);
+					box.appendChild(content);
+					box.appendChild(name);
+					usertxt.value = " ";
+					username.value = " ";
+				}
+				else {
+				 	alert ("Not enought symbols!");
+				}
+			}
+
+			btn.addEventListener("click", sendMess);
+		</script>
+	</body>
+</html>	

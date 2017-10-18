@@ -1,0 +1,102 @@
+
+.contacts {
+	width: 100%;
+	height: 700px;
+}
+
+.contact-board {
+	max-width: 1170px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+
+.contact-txt, .contact-photo {
+	max-width: 570px;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+
+.contact-txt {
+	padding-top: 100px;
+	height: 100%;
+}
+
+.contact-photo {
+	height: 49%;
+	margin-bottom: 2%;
+}
+
+.contact-txt p {
+	font-family: LatoThin, sans-serif;
+	font-size: 15px;
+	color: #BBBBBB;
+	line-height: 1.2;
+	word-spacing: 5px;
+	margin-bottom: 30px;
+}
+
+.contact-txt h3 span {
+	color: black;
+}
+
+.contact-txt p:last-child {
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+#contact-number {
+	font-family: LatoThin, sans-serif;
+	font-size: 1.5em;
+	color: #BBBBBB;
+}
+
+.contact-photo img {
+	width: 100%;
+	height: 100%;
+}
+
+.map {
+    max-width: 100%;
+    height: 49%;
+}
+
+@media only screen and (max-width: 766px) {	
+	
+	.contacts {
+		margin-bottom: 320px;
+	}
+
+	.contact-board {
+		display: block;
+		width: 100%;
+	}
+
+	.contact-txt {
+		text-align: center;
+		width: 100%;
+		margin: 0;
+		height: auto;
+	}
+
+	.contact-photo {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: auto;
+	}
+
+	.map {
+		width: 100%;
+		height: 200px;
+		overflow: initial;
+	}
+}	
+
+@media only screen and (max-width: 416px) {
+
+	body {
+		font-size: 10px;
+	}
+}

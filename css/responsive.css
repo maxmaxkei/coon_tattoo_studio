@@ -1,0 +1,81 @@
+	
+	p, h1, h2, h3 {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	body {
+		font-size: 16px;
+		margin: 0;
+	}
+
+	h3 {
+		font-family: LatoThin, sans-serif;
+		font-weight: 100;
+		font-size: 3em;
+		color: #A9A9A9;
+		margin-bottom: 30px;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	h3 span {
+		font-family: LatoSemibold, sans-serif;
+		color: white;
+		text-transform: uppercase;
+	}
+
+	@font-face {
+	    font-family: LatoThin;
+	    src:url(../fonts/lato.thin.ttf);
+	}
+
+	@font-face {
+	    font-family: LatoSemibold;
+	    src: url(../fonts/lato.semibold.ttf);
+	}
+
+@media only screen and (max-width: 766px) {
+
+/*Navigation block*/
+
+	#navigation {
+		position: fixed;
+		z-index: 50;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.8);
+		box-sizing: border-box;
+		padding-top: 5vh;
+	}
+
+	#navigation ul {
+		list-style: none;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+
+	#navigation ul li {
+		width: 100%;
+		height: 10vh;
+		text-align: center;
+	}
+
+	#navigation ul li a {
+		text-decoration: none;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.3em;
+		color: white;
+	}
+
+	.headdings {
+		text-transform: uppercase;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.5em;
+		color: #BBBBBB;
+	}
+}

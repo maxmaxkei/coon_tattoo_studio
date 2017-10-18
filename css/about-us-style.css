@@ -1,0 +1,112 @@
+
+header {
+	margin-bottom: 50px;
+}
+
+p {
+	font-family: LatoThin, sans-serif;
+	font-size: 1.5em;
+	color: #BBBBBB;
+	line-height: 1.4;
+}
+
+span {
+	color: white;
+	cursor: pointer;
+}
+
+.t-style, .t-signup, .education {
+	width: 100%;
+	height: 600px;
+	background-color: #191919;
+	padding-top: 100px;
+	box-sizing: border-box;
+}
+
+.t-style {
+	transform: skewY(-3.4deg);
+}
+
+.education {
+	transform: skewY(3.4deg);
+	z-index: 10;
+	position: relative;
+	margin-bottom: 100px;
+}
+
+.t-signup {
+	background-color: transparent;
+}
+
+.container {
+	transform: skewY(3.4deg);
+	display: flex;
+	justify-content: space-between;
+	max-width: 1170px;
+	height: 400px;
+	margin: auto;
+}
+
+.container > div {
+	width: 48%;
+}
+
+.container > div p {
+	padding-top: 60px;
+}
+
+.container div img {
+	width: 100%;
+	height: 100%;
+}
+.third {
+	transform: skewY(-3.4deg);
+}
+
+.education .third p {
+	padding-top: 40px;
+}
+.sec {
+	transform: none;
+}
+
+.t-black {
+	color: black;
+}
+
+
+@media only screen and (min-width: 767px) and (max-width: 1116px) {
+
+	p {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width: 619px) {
+	
+	.t-signup, .education, .t-style {
+		width: 100%;
+		height: auto;
+		padding: 20px 0;
+		box-sizing: initial;
+	}
+
+	.fade {
+		display: none;
+	}
+
+	.container {
+		display: block;
+		height: auto;
+	}
+
+	.container>div {
+		margin: auto;
+		width: 90%;
+	}
+
+	.container div p {
+		padding: 0;
+		margin: 50px auto;
+	}
+}

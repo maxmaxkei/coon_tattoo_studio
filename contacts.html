@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact CoonTattoo</title>
+    <link href="css/contacts-style.css" rel="stylesheet">
+    <link href="css/repeating-style.css" rel="stylesheet">
+    <link href="css/repeating-head-footer-style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC86mAc9_6h_dkOU6zElnnWpNptk9Wzt_w"></script>
+  </head>
+  <body>
+    <header class="main-head">
+      <div class="head">
+        <div class="burger" id="burger">
+          <img src="images/raccoon-intro.png" alt="Coon Image Logo" title="Coon Logo">
+        </div>
+        <div id="TNum">Tel: 0800 000 000</div>
+        <div id="logo">
+          <img src="images/header/logo.png" alt="Tattoo Studio Logo" title="CoonTattoo logo">
+        </div>
+        <div id="VK">
+          <a href="#" title="CoonTattoo VKontakte Group">
+            <img src="images/header/vk_icon.png" alt="CoonTattoo VK group" title="CoonTattoo VK link">
+          </a>
+        </div>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html" title="Start Page">home</a></li>
+          <li><a href="about-us.html" title="About us Page">about us</a></li>
+          <li><a href="#" title="Artist Page">artists</a></li>
+          <li><a href="testimonials.html" title="Testimonials Page">testimonials</a></li>
+          <li><a href="gallery.html" title="Gallery Page">gallery</a></li>
+          <li><a href="#" title="Blog Page">blog</a></li>
+          <li><a href="contacts.html" title="Contact Us Page">contact us</a></li>
+        </ul>
+      </nav>
+      </header>
+    <section class="contacts">
+      <div class="contact-board">
+        <div class="contact-txt">
+          <h3><span>contact us</span><br>drop in or holla!</h3>
+          <p>Have a Question regarding CoonTattoo? Contact us with the contacts below:</p>
+          <p><span class="glyphicon glyphicon-map-marker"></span>21&#8211;26 Dolomite Street, City Centre, Plymouth, Devon.</p>
+          <p><span class="glyphicon glyphicon-time"></span>Monday to Friday 11am-6pm. Saturdays 9am&#8211;9pm</p>
+          <p id="contact-number">Tel: 0800 000 000</p>
+          <p>holla@tattoostudio.com</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-photo">
+            <img src="images/tatto-bild.jpg" alt="The building of the CoonTattoo Studio" title="The building of the CoonTattoo Studio">
+          </div>
+          <div id="map" class="map">  
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="white">
+      </div>
+      <div class="black">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images/header/logo.png" alt="Tattoo Studio Logo" title="CoonTattoo logo">
+          </div>
+          <div class="footer-txt">
+            <p>&#169;Coon Tattoo Studio (registered in England: 8000000). All Rights Reserved.</p>
+            <p>Designed by <a href="http://RobbyDesigns.com">RobbyDesigns.com</a></p>
+          </div>
+          <div class="footer-icon">
+            <img src="images/header/vk_icon.png" alt="CoonTattoo VK group" title="CoonTattoo VK link">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="navigation">
+      <ul>
+        <li class="headdings">Menu</li>
+        <li><a href="index.html" title="Start Page">Home</a></li>
+        <li><a href="about-us.html" title="About us Page">About us</a></li>
+        <li><a href="#" title="Artist Page">Artists</a></li>
+        <li><a href="testimonials.html" title="Testimonials Page">Testimonials</a></li>
+        <li><a href="gallery.html" title="Gallery Page">Gallery</a></li>
+        <li><a href="#" title="Blog Page">Blog</a></li>
+        <li><a href="contacts.html" title="Contact Us Page">Contact us</a></li>
+        <li id="cls" class="headdings">Close</li>
+      </ul>
+    </div>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript">
+      function initMap() {
+      var centerLatLng = new google.maps.LatLng(50.376169, -4.136625);
+
+        var mapOptions = {
+          center: centerLatLng,
+          zoom: 17
+      };
+
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+      var marker = new google.maps.Marker({
+          position: centerLatLng,             
+          map: map,                           
+          title: "CoonTattoo Studio"
+          });
+      }
+
+      google.maps.event.addDomListener(window, "load", initMap);
+    </script>
+  </body>
+</html> 
